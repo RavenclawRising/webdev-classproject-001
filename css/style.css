@@ -7,8 +7,8 @@ html {
 
 body {
 	color: #333333;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 30px;
 	line-height: 1.6;
 	background-color: #f9f9f9;
 }
@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Courier New", Courier, monospace;
+	font-family: inherit;
 	font-weight: bold;
 	line-height: 1;
 	text-transform: uppercase;
@@ -27,7 +27,7 @@ h6 {
 }
 
 p {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: inherit;
 	line-height: 1.6;
 	margin: 0 0 1.6rem;
 }
@@ -43,32 +43,97 @@ a:hover {
 	border-bottom: 2px solid #002348;
 }
 
-hr {
-	margin: 3.2rem 1.6rem;
-	color: #555555;
-	border-color: #555555;
-}
+
 
 /* Layout */
 
+
+.border {
+	display: block;
+	margin: 20px;	
+	padding: 10%;
+	max-width: 1493px;
+	max-height: auto;
+	border: solid white 2px;
+	z-index: 1;
+
+}
+
 .container {
+	padding: 15px;
+	max-width: 1500px;
+	max-height: auto;
+	color: white;	
+	font-size: x-large;
+	font-weight: 600;
+	display: block;
+	text-align: center;
+	position: relative;
+}
+
+
+
+.my-quote { 
 	padding: 0;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1000px;
+	display: flex;
+	flex: auto;
+	max-width: 1490px;
+	max-height: auto;
+	background: radial-gradient(at 54% -23px, #9F0B4D, #032D70);
+	border-radius: 15px;
+	position: relative;
+	font-weight: bold;
+	margin: 0;
+	}
+
+
+
+
+
+q {
+	font-size: inherit;
+	font-weight: 800;
+	max-width: 95%;
+	height: auto;
+	
+}
+
+q::before,
+q::after {
+	content: '"';
+	position: absolute;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 3em;
+	color: white;
+}
+
+q::before {
+	top: 20px;
+	left: 75px;
+}
+
+q::after {
+	bottom: 0px;
+	right: 75px;
+}
+
+.person {
+	font-family: sans-serif;
+	font-size: medium;
+	font-style: oblique;
+	text-transform: uppercase;
 }
 
 /* Media Queries */
 
-@media (min-width: 699px) {
-
-	/* CSS HERE */
-
+@media screen and (min-width: 699px) {
+	max-width: 998px%;
+	height: 100vh;
 }
 
 /* Desktop Media Query */
-@media (min-width: 999px) {
-
-	/* CSS HERE */
+@media screen and (min-width: 999px) {
+	width: 1500px;
+	height: 100vh;
 
 }
